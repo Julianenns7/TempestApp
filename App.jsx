@@ -1,21 +1,21 @@
-import React from 'react';
-
-import { View, Text, SafeAreaView } from 'react-native';
-import Search from "./search.jsx";
-import WeatherDisplay from './forecastDisplay.jsx';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import QuickWeather from './Components/QuickForecast';
+import DetailedForecast from './Components/DetailedForecast';
+import SevenDayForecast from './Components/SevenDayForecast';
 
  function App() {
+    const Stack = createStackNavigator();
+
     return (
-        <View>
-
-            <WeatherDisplay />
-        </View>
-
-
-
-    );
-
-
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen name="Quick" component={QuickWeather} />
+            <Stack.Screen name="Detailed" component={DetailedForecast} />
+            <Stack.Screen name="7DayForecast" component={SevenDayForecast} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      );
 }
 export default App;
 
