@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import{Button} from 'react-native';
 import QuickForecast from '../Components/QuickForecast';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -20,4 +21,19 @@ function QuickScreen({ navigation }) {
     );
 }
 
+=======
+import{Button} from 'react-native'
+
+function QuickScreen({ navigation }) {
+
+    return (
+
+        <Button
+            title="Quick"
+            onPress={() => navigation.navigate('Quick')}
+        />
+    );
+}
+
+>>>>>>> 1680b47db94f4377504f1a4a499604610ed46e46
 export default QuickScreen;

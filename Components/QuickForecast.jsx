@@ -36,7 +36,11 @@ const QuickWeather = () => {
                     {today && (
                         <>
                             <Text>Today: {today.datetime}</Text>
+<<<<<<< HEAD
                             <Text> {today.weather.description} </Text>
+=======
+                            <Text> {today.description} </Text>
+>>>>>>> 1680b47db94f4377504f1a4a499604610ed46e46
                             <Text> Temp: {today.temp} </Text>
                             <Text> High: {today.high_temp} </Text>
                             <Text> Low: {today.low_temp} </Text>
