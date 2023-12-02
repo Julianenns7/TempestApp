@@ -1,34 +1,39 @@
-<<<<<<< HEAD
-import{Button} from 'react-native';
+import{Button, View} from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 import DetailedForecast from '../Components/DetailedForecast';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import tw from 'twrnc';
+import CustomButton from '../Components/customButton';
 function DetailedScreen({ navigation }) {
 
     return (
-        <SafeAreaView>
+        <SafeAreaView style={tw`flex-1 justify-between bg-slate-900 `}>
             <DetailedForecast />
-            <Button
+            
+            
+            <View style={tw`flex-row justify-center h-20 `}>
+                <CustomButton
+                    title="Detailed"
+                    onPress={() => navigation.navigate('Detailed')}
+                    
+                    
+                    text="Detailed"
+                />
+
+                <CustomButton
+                    title="7DayForecast"
+                    onPress={() => navigation.navigate('7DayForecast')}
+                    text="Seven Day Forecast"
+                    
+                />
+                <CustomButton
+                
                 title="Quick"
                 onPress={() => navigation.navigate('Quick')}
-            />
+                text="Quick"
+                />
+            </View>
         </SafeAreaView>
-
     );
 }
 
-=======
-import{Button} from 'react-native'
-
-function DetailedScreen({ navigation }) {
-
-    return (
-
-        <Button
-            title="Detailed"
-            onPress={() => navigation.navigate('Detailed')}
-        />
-    );
-}
-
->>>>>>> 1680b47db94f4377504f1a4a499604610ed46e46
 export default DetailedScreen;
